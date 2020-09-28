@@ -1,0 +1,194 @@
+<div class="container">
+   <div class="row border">
+     <div class="col-sm-6 col-md-6 col-lg-6 ">
+       <h4>Contact List</h4>
+       <div class="form-group has-search">
+         <input type="text" class=" form-control "  placeholder="Search Name and Contact Number" [(ngModel)]="searchText">
+     </div>
+       <div class="table-wrapper-scroll-y my-custom-scrollbar border">
+         <table class="table table-hover">
+           <thead  class="thead-dark">
+             <tr class="">
+               <th scope="col">Sr. No.</th>
+               <th scope="col">Name</th>
+               <th scope="col">Contact Number</th>
+             </tr>
+           </thead>
+           <tbody  >
+             <tr *ngFor= "let customer of userdata | contact: searchText:'Display_Name'; let i = index">
+               <th scope="row">{{i+1}}</th>
+               <td (click)="setRow(i)">{{customer.Display_Name}}</td>
+               <td (click)="setRow(i)">{{customer.Home_Phone}}</td>
+               
+               
+             </tr>
+           </tbody>
+         </table>
+       </div>
+     </div>
+     <div class="col-sm-6 col-md-6 col-lg-6  ">
+       <h4 style="
+       margin-top: 54px;">Contact Details</h4>
+       <div class="table-wrapper-scroll-y my-custom-scrollbar border">
+         <table class="table table-hover " >
+           <tbody *ngFor= "let item of dataSource | contact: searchText; let i=index">
+           <tr class="" >
+             <th>E-mail Address:</th>
+             <td >{{item.E_mail_Address}}</td>
+             
+           </tr>
+           <tr class="" >
+             <th>Related Name:</th>
+             <td>{{item.Related_name}}</td>
+             
+           </tr>
+           
+           <tr class="">
+             <th>Home Address 2:</th>
+             <td>{{item.Home_Address_2}}</td>
+           </tr>
+           <tr class="">
+             <th>Anniversary:</th>
+             <td>{{item.Anniversary}}</td>
+           </tr>
+           <tr class="">
+             <th>First Name:</th>
+             <td>{{item.First_Name}}</td>
+           </tr>
+           <tr class="">
+             <th>Business Address 2</th>
+             <td>{{item.Business_Address_2}}</td>
+           </tr>
+           <tr class="">
+             <th>Department:</th>
+             <td>{{item.Department}}</td>
+           </tr>
+           <tr class="">
+             <th>Display Name:</th>
+             <td>{{item.Display_Name}}</td>
+           </tr>
+           <tr class="">
+             <th>Home State:</th>
+             <td>{{item.Home_State}}</td>
+           </tr>
+           <tr>
+             <th>Business Country:</th>
+             <td>{{item.Business_Country}}</td>
+           </tr>
+           <tr class="">
+             <th>Home Street:</th>
+             <td>{{item.Home_Street}}</td>
+           </tr>
+           <tr class="">
+             <th>Birthday:</th>
+             <td>{{item.Birthday}}</td>
+           </tr>
+           <tr>
+             <th>Home Country:</th>
+             <td>{{item.Home_Country}}</td>
+           </tr>
+           <tr class="">
+             <th>Pager:</th>
+             <td>{{item.Pager}}</td>
+           </tr>
+           <tr class="">
+             <th>Categories:</th>
+             <td>{{item.Categories}}</td>
+           </tr>
+           <tr class="">
+             <th>Home City:</th>
+             <td>{{item.Home_City}}</td>
+           </tr>
+           <tr class="">
+             <th>E-mail 3 Address:</th>
+             <td>{{item.E_mail_3_Address}}</td>
+           </tr>
+           <tr class="">
+             <th>Home Fax:</th>
+             <td>{{item.Home_Fax}}</td>
+           </tr>
+           <tr class="">
+             <th>Gender:</th>
+             <td>{{item.Gender}}</td>
+           </tr>
+           <tr class="">
+             <th>Notes:</th>
+             <td>{{item.Notes}}</td>
+           </tr>
+           <tr class="">
+             <th>Country Code:</th>
+             <td>{{item.Country_Code}}</td>
+           </tr>
+           <tr class="">
+             <th>Job Title:</th>
+             <td>{{item.Job_Title}}</td>
+           </tr>
+           <tr  class="">
+             <th>Business Address:</th>
+             <td>{{item.Business_Address}}</td>
+           </tr>
+           <tr class="">
+             <th>Web Page 2:</th>
+             <td>{{item.Web_Page_2}}</td>
+           </tr>
+           <tr class="">
+             <th>Mobile Phone:</th>
+             <td>{{item.Mobile_Phone}}</td>
+           </tr>
+           <tr class="">
+             <th>Organization:</th>
+             <td>{{item.Organization}}</td>
+           </tr>
+           <tr class="">
+             <th>Home Phone:</th>
+             <td>{{item.Home_Phone}} </td>
+           </tr>
+           <tr class="">
+             <th>E-mail 2 Address:</th>
+             <td>{{item.E_mail_2_Address}}</td>
+           </tr>
+           <tr class="">
+             <th>Last Name:</th>
+             <td>{{item.Last_Name}}</td>
+           </tr>
+           <tr class="">
+             <th>Nickname:</th>
+             <td>{{item.Nickname}}</td>
+           </tr>
+           <tr class="">
+             <th>Business Fax:</th>
+             <td>{{item.Business_Fax}}</td>
+           </tr>
+           <tr class="">
+             <th>Home Postal Code:</th>
+             <td>{{item.Home_Postal_Code}}</td>
+           </tr>
+           <tr class="">
+             <th>Business Phone:</th>
+             <td>{{item.Business_Phone}}</td>
+           </tr>
+           <tr class="">
+             <th>Business Postal Code:</th>
+             <td>{{item.Business_Postal_Code}}</td>
+           </tr>
+           <tr class="">
+             <th>Web Page:</th>
+             <td>{{item.Web_Page}}</td>
+           </tr>
+           <tr class="">
+             <th>Business City:</th>
+             <td>{{item.Business_City}}</td>
+           </tr>
+           <tr class="">
+             <th>Business State:</th>
+             <td>{{item.Business_State}}</td>
+           </tr>
+           <tr>
+            
+           </tr>
+         </tbody>
+         </table>
+       </div>
+     </div>
+   </div>
+ </div>
